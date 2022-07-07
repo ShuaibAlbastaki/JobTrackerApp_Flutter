@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_local_variable, unused_element
 
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/common_widgets/show_exception_alert_dialog.dart';
@@ -26,15 +29,37 @@ class JobsPage extends StatelessWidget {
   }
 
   Future<void> _confirmSignOut(BuildContext context) async {
-    final didRequestSignOut = await showAlertDialog(
-      context,
-      title: "Log out",
-      content: "Are you sure?",
-      cancelActionText: "Cancel",
-      defaultActionText: "Logout",
-    );
-    if (didRequestSignOut == true) {
-      _signOut(context);
+    if (!Platform.isIOS) {
+      final didRequestSignOut = await showAlertDialog(
+        context,
+        title: "Log out",
+        content: "Are you sure?",
+        cancelActionText: "Cancel",
+        defaultActionText: "Logout",
+      );
+      if (didRequestSignOut == true) {
+        _signOut(context);
+      }
+    } else {
+      await showCupertinoDialog(
+          context: context,
+          builder: (context) => CupertinoAlertDialog(
+                title: Text("Log out"),
+                content: Text("Are you sure?"),
+                actions: <Widget>[
+                  CupertinoDialogAction(
+                    child: Text("Cancel"),
+                    onPressed: () => Navigator.of(context).pop(false),
+                  ),
+                  CupertinoDialogAction(
+                    onPressed: () {
+                      _signOut(context);
+                      Navigator.of(context).pop(true);
+                    },
+                    child: Text("OK"),
+                  )
+                ],
+              ));
     }
   }
 

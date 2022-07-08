@@ -5,7 +5,6 @@ import 'package:time_tracker_flutter_course/app/landing_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
 
-//TODO: Add app root widget in the runApp() method.
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

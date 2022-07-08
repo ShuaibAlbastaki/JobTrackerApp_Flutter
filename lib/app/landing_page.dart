@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, dead_code, unused_local_variable
+// ignore_for_file: prefer_const_constructors, unused_local_variable
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -9,9 +9,14 @@ import 'package:time_tracker_flutter_course/app/sign_in/sign_in_page.dart';
 
 import 'services/database.dart';
 
+/// This is the home route of our app when it launches.
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
 
+  /// This build method will check whether the user is signed in or not.
+  /// If he is, give user and id and show him the JobsPage.
+  /// If no user is found, present him with the SignInPage.
+  /// If an asynchronous connection cannot be found, show the CircularProgressIndicator.
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<AuthBase>(context, listen: false);

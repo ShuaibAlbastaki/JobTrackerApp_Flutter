@@ -1,6 +1,6 @@
 # time_tracker_flutter_app
 
-A new Flutter project.
+A Job and Wage Tracker Flutter app project.
 
 ## Getting Started
 

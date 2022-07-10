@@ -5,6 +5,7 @@ import 'package:time_tracker_flutter_course/app/home/jobs/empty_content.dart';
 
 typedef ItemWidgetBuilder<T> = Widget Function(BuildContext context, T item);
 
+/// This class will help us build the jobs page with a job item list that is mutable through the Provider package.
 class ListItemsBuilder<T> extends StatelessWidget {
   const ListItemsBuilder(
       {Key? key, required this.snapshot, required this.itemBuilder})

@@ -4,6 +4,8 @@ import 'package:time_tracker_flutter_course/app/home/models/job.dart';
 import 'package:time_tracker_flutter_course/app/services/api_path.dart';
 import 'package:time_tracker_flutter_course/app/services/firestore_service.dart';
 
+/// Database class provides the abstraction for the Storage methods in the Database.
+/// This class will serve to consolidate all jobs-related functions in the app and link it to Cloud Firestore Database.
 abstract class Database {
   Future<void> setJob(Job job);
   Future<void> deleteJob(Job job);
@@ -12,6 +14,7 @@ abstract class Database {
 
 String documentIdFromCurrentDate() => DateTime.now().toIso8601String();
 
+/// FirestoreDatabase class (or API) provides the implementation of the abstraction provided in Database.
 class FirestoreDatabase implements Database {
   FirestoreDatabase({required this.uid}) : assert(uid != null);
   final String uid;

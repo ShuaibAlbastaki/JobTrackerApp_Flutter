@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/sign_in/email_sign_in_form_change_notifier.dart';
 
+/// This class builds the Email Sign in page that appears once user clicks "Sign in with Email".
 class EmailSignInPage extends StatelessWidget {
   const EmailSignInPage({Key? key}) : super(key: key);
 

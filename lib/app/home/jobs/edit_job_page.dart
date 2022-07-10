@@ -8,6 +8,7 @@ import 'package:time_tracker_flutter_course/app/common_widgets/show_exception_al
 import 'package:time_tracker_flutter_course/app/home/models/job.dart';
 import 'package:time_tracker_flutter_course/app/services/database.dart';
 
+/// This class will serve to build a mutable form page that allows user to Edit the job name and rate per hour.
 class EditJobPage extends StatefulWidget {
   const EditJobPage({Key? key, required this.database, this.job})
       : super(key: key);

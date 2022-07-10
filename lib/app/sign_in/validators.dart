@@ -1,7 +1,9 @@
+/// Abstract class for String validation.
 abstract class StringValidator {
   bool isValid(String value);
 }
 
+/// Implementation class of the StringValidator to test for NonEmptyStringValidator that returns a bool.
 class NonEmptyStringValidator implements StringValidator {
   @override
   bool isValid(String value) {
@@ -9,6 +11,7 @@ class NonEmptyStringValidator implements StringValidator {
   }
 }
 
+/// Constants for Email and Password validators.
 class EmailAndPasswordValidators {
   final StringValidator emailValidator = NonEmptyStringValidator();
   final StringValidator passwordValidator = NonEmptyStringValidator();

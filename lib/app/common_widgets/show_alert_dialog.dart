@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+/// This class will serve as a boilerplate for Alert Dialogs for both iOS or Android OS.
 Future showAlertDialog(
   BuildContext context, {
   required String title,

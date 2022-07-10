@@ -2,7 +2,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-///  AuthBase class provides the abstraction for Authentication flow and methods in the app.
+/// AuthBase class provides the abstraction for Authentication flow and methods in the app.
+/// This class will serve to consolidate all authentication-related functions in the app and link it to Firebase Authentication service.
 abstract class AuthBase {
   User? get currentUser;
   Stream<User?> authStateChanges();

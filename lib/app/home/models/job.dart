@@ -1,5 +1,6 @@
 // ignore_for_file: unnecessary_null_comparison
 
+/// This class will provide a Map of key, value pairs for Job ID, Job Name, and Job Rate Per Hour.
 class Job {
   Job({required this.id, required this.name, required this.ratePerHour});
 

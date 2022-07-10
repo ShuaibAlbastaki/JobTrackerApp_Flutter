@@ -16,6 +16,9 @@ import 'package:time_tracker_flutter_course/app/services/database.dart';
 
 import '../../common_widgets/show_alert_dialog.dart';
 
+/// This is the route that appears when user is signed in.
+/// Whether user signed in via Google, Email, or Anon.
+/// User gets redirected to this page after signing in.
 class JobsPage extends StatelessWidget {
   const JobsPage({Key? key}) : super(key: key);
 

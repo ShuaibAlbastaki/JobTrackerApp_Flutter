@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
 
+/// This class will handle sign-in flow.
 class SignInManager {
   SignInManager({required this.auth, required this.isLoading});
 
@@ -22,11 +23,9 @@ class SignInManager {
     }
   }
 
-  Future<User?> signInAnonmously() async {
-    return await _signIn(auth.signInAnonmously);
-  }
+  Future<User?> signInAnonmously() async =>
+      await _signIn(auth.signInAnonmously);
 
-  Future<User?> signInWithGoogle() async {
-    return await _signIn(auth.signInWithGoogle);
-  }
+  Future<User?> signInWithGoogle() async =>
+      await _signIn(auth.signInWithGoogle);
 }

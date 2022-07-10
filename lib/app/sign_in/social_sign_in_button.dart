@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/common_widgets/custom_elevated_button.dart';
 
+/// This class creates the design outline of the social sign in button used for Google.
 class SocialSignInButton extends CustomElevatedButton {
   SocialSignInButton(
       {Key? key,

@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:time_tracker_flutter_course/app/common_widgets/form_submit_button.dart';
 import 'package:time_tracker_flutter_course/app/sign_in/email_sign_in_change_model.dart';
+import 'package:time_tracker_flutter_course/app/common_widgets/show_exception_alert_dialog.dart';
+import 'package:time_tracker_flutter_course/app/services/auth.dart';
 
-import '../common_widgets/show_exception_alert_dialog.dart';
-import '../services/auth.dart';
-
+/// This class will rebuild the Email Sign In Page using the Change Notifier attached to the Email page form.
 class EmailSignInFormChangeNotifier extends StatefulWidget {
   const EmailSignInFormChangeNotifier({Key? key, required this.model})
       : super(key: key);

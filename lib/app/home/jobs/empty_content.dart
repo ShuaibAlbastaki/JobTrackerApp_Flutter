@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+/// This class builds an empty page decoration to show user if the page has empty lists.
 class EmptyContent extends StatelessWidget {
   const EmptyContent({
     Key? key,

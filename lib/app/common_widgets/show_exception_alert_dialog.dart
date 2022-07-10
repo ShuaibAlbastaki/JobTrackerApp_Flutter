@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/common_widgets/show_alert_dialog.dart';
 
+/// This class will serve as a bolierplate for Exception handling with Alert Dialogs.
 Future<void> showExceptionAlertDialog(
   BuildContext context, {
   required String title,

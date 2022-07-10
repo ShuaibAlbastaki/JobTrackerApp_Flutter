@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// This class builds a custome template for the MaterialApp's ElevatedButton widget.
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton(
       {Key? key,

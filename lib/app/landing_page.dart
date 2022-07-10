@@ -9,7 +9,7 @@ import 'package:time_tracker_flutter_course/app/sign_in/sign_in_page.dart';
 
 import 'services/database.dart';
 
-/// This is the home route of our app when it launches.
+/// This is the home route of our application when it launches.
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
 import 'package:time_tracker_flutter_course/app/sign_in/validators.dart';
+import 'package:time_tracker_flutter_course/app/sign_in/email_sign_in_model.dart';
 
-import 'email_sign_in_model.dart';
-
+/// This class helps centralize all the changes occuring on the sign in page or creat an account page.
 class EmailSignInChangeModel with EmailAndPasswordValidators, ChangeNotifier {
   EmailSignInChangeModel(
       {required this.auth,

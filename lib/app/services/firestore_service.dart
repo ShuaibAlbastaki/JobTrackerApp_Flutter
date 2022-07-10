@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+/// This class will provide API access to Firestore Service from Firebase by creating a singleton instance in this file.
 class FirestoreService {
   FirestoreService._();
   static final instance = FirestoreService._();

@@ -7,8 +7,7 @@ import 'package:time_tracker_flutter_course/app/sign_in/email_sign_in_page.dart'
 import 'package:time_tracker_flutter_course/app/sign_in/sign_in_manager.dart';
 import 'package:time_tracker_flutter_course/app/sign_in/sign_in_button.dart';
 import 'package:time_tracker_flutter_course/app/sign_in/social_sign_in_button.dart';
-
-import '../services/auth.dart';
+import 'package:time_tracker_flutter_course/app/services/auth.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key, required this.manager, required this.isLoading})
@@ -67,6 +66,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Time Tracker"),
         shadowColor: Colors.lime,
         elevation: 4,

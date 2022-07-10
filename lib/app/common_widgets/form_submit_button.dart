@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/app/common_widgets/custom_elevated_button.dart';
 
+/// This class is a template for the submit form behavior.
 class FormSubmitButton extends CustomElevatedButton {
   FormSubmitButton({
     Key? key,

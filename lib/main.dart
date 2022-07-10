@@ -5,6 +5,7 @@ import 'package:time_tracker_flutter_course/app/landing_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:time_tracker_flutter_course/app/services/auth.dart';
 
+/// Application's starting point.
 Future<void> main() async {
   // This statement ensures that Firebase is initialized before the "runApp" method is executed.
   WidgetsFlutterBinding.ensureInitialized();
